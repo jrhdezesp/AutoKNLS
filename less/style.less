@@ -1,0 +1,153 @@
+@import './variables.less';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @color-text;
+  background-color: #ffffff;
+}
+
+a {
+  color: @color-primary;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: @primary-700;
+  }
+}
+
+.container {
+  max-width: @breakpoint-wide;
+  margin: 0 auto;
+  padding: 0 @spacing-md;
+}
+
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: @spacing-sm 0;
+
+  .logo {
+    height: 50px;
+  }
+
+  .nav {
+    display: flex;
+    gap: @spacing-md;
+    align-items: center;
+    flex-wrap: wrap;
+
+    a {
+      color: @color-text;
+      font-weight: 500;
+      font-size: 0.95rem;
+
+      &:hover {
+        color: @color-primary;
+      }
+
+      &.active {
+        color: @color-primary;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: @secondary-800;
+  color: @secondary-100;
+  padding: @spacing-xl 0 @spacing-md;
+  margin-top: @spacing-xl;
+
+  a {
+    color: @secondary-100;
+
+    &:hover {
+      color: @color-primary;
+    }
+  }
+
+  h3, h4 {
+    color: #ffffff;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: @spacing-sm @spacing-lg;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-decoration: none;
+
+  &-primary {
+    background-color: @color-primary;
+    color: #ffffff;
+
+    &:hover {
+      background-color: @primary-700;
+      color: #ffffff;
+    }
+  }
+
+  &-secondary {
+    background-color: @color-secondary;
+    color: #ffffff;
+
+    &:hover {
+      background-color: @secondary-700;
+      color: #ffffff;
+    }
+  }
+
+  &-outline {
+    background-color: transparent;
+    border: 2px solid @color-primary;
+    color: @color-primary;
+
+    &:hover {
+      background-color: @color-primary;
+      color: #ffffff;
+    }
+  }
+}
+
+main {
+  min-height: 60vh;
+}
+
+section {
+  h1 {
+    color: @color-text;
+  }
+
+  h2 {
+    color: @color-text;
+  }
+
+  h3 {
+    color: @color-primary;
+  }
+}
+
+@media (max-width: @breakpoint-tablet) {
+  .header .nav {
+    flex-direction: column;
+    gap: @spacing-sm;
+  }
+
+  main {
+    min-height: auto;
+  }
+}
