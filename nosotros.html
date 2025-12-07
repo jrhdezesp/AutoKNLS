@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - AutoKNLS</title>
+    <link rel="icon" type="image/png" href="/logo-autoknls.png">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+    {{> header}}
+
+    <main>
+        <section style="padding: 4rem 0;">
+            <div class="container">
+                <h1 style="font-size: 2.5rem; margin-bottom: 2rem; text-align: center;">Nosotros</h1>
+                <p style="text-align: center; font-size: 1.125rem; margin-bottom: 3rem; color: #555555;">Conoce quiénes
+                    somos y qué nos impulsa</p>
+
+                <div style="max-width: 880px; margin: 0 auto; display: grid; gap: 3rem;">
+                    <div
+                        style="background: #ffffff; padding: 2.5rem; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.1);">
+                        <h2 style="margin-bottom: 1.5rem; color: #ff2c15; font-size: 1.75rem;">Quiénes Somos</h2>
+                        <p style="line-height: 1.8; color: #434343; margin-bottom: 1rem;">
+                            AutoKNLS es una empresa especializada en la distribución de repuestos y accesorios
+                            automotrices de alta calidad. Nacimos con el objetivo de ofrecer soluciones confiables para
+                            el mantenimiento y mejora de vehículos.
+                        </p>
+                        <p style="line-height: 1.8; color: #434343;">
+                            Contamos con un equipo de profesionales capacitados y una red de sucursales que nos permite
+                            estar cerca de nuestros clientes en todo momento.
+                        </p>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                        <div style="text-align: center; padding: 2rem; background: #f5f5f5; border-radius: 8px;">
+                            <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Misión</h3>
+                            <p style="line-height: 1.7; color: #555555;">Proveer repuestos y accesorios de calidad con
+                                servicio ágil y asesoría experta para mantener tu vehículo en óptimas condiciones.</p>
+                        </div>
+                        <div style="text-align: center; padding: 2rem; background: #f5f5f5; border-radius: 8px;">
+                            <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Visión</h3>
+                            <p style="line-height: 1.7; color: #555555;">Ser la red líder en distribución automotriz,
+                                reconocida por calidad, disponibilidad e innovación en servicio al cliente.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        style="background: linear-gradient(135deg, #ff2c15 0%, #d60000 100%); color: white; padding: 2.5rem; border-radius: 8px; text-align: center;">
+                        <h3 style="margin-bottom: 1rem; font-size: 1.75rem;">Nuestros Valores</h3>
+                        <div
+                            style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-top: 1.5rem;">
+                            <span
+                                style="background: rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600;">Calidad</span>
+                            <span
+                                style="background: rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600;">Confianza</span>
+                            <span
+                                style="background: rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600;">Servicio</span>
+                            <span
+                                style="background: rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600;">Innovación</span>
+                            <span
+                                style="background: rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600;">Compromiso</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {{> footer}}
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
