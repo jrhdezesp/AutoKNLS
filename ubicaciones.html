@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ubicaciones - AutoKNLS</title>
+  <link rel="icon" type="image/png" href="/logo-autoknls.png">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  {{> header}}
+  
+  <main>
+    <section style="padding: 4rem 0;">
+      <div class="container">
+        <h1 style="font-size: 2.5rem; margin-bottom: 2rem; text-align: center;">Nuestras Ubicaciones</h1>
+        <p style="text-align: center; font-size: 1.125rem; margin-bottom: 3rem; color: #555555;">Encuéntranos en tu ciudad</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+          <div style="padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">
+            <h3 style="margin-bottom: 1rem;">Sucursal Principal</h3>
+            <p><strong>Dirección:</strong> Por definir</p>
+            <p><strong>Teléfono:</strong> Por definir</p>
+            <p><strong>Horario:</strong> Lun-Vie 8:00-18:00, Sáb 8:00-14:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {{> footer}}
+  
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
