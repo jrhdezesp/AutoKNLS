@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes - AutoKNLS</title>
+  <link rel="icon" type="image/png" href="/logo-autoknls.png">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  {{> header}}
+  
+  <main>
+    <section style="padding: 4rem 0;">
+      <div class="container">
+        <h1 style="font-size: 2.5rem; margin-bottom: 2rem; text-align: center;">Preguntas Frecuentes</h1>
+        <p style="text-align: center; font-size: 1.125rem; margin-bottom: 3rem; color: #555555;">Resolvemos tus dudas sobre nuestros productos y servicios</p>
+        
+        <div style="max-width: 880px; margin: 0 auto; display: grid; gap: 1.5rem;">
+          <details style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ff2c15; cursor: pointer;">
+            <summary style="font-weight: 600; font-size: 1.05rem; color: #262626; user-select: none;">¿Cuáles son los horarios de atención?</summary>
+            <p style="margin-top: 1rem; color: #555555; line-height: 1.7;">Lunes a viernes de 8:00 a 18:00 horas. Sábados de 8:00 a 14:00 horas. Domingos cerrado.</p>
+          </details>
+
+          <details style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ff2c15; cursor: pointer;">
+            <summary style="font-weight: 600; font-size: 1.05rem; color: #262626; user-select: none;">¿Hacen envíos?</summary>
+            <p style="margin-top: 1rem; color: #555555; line-height: 1.7;">Sí, realizamos envíos a todo el país. Consulta con nuestro equipo sobre disponibilidad y costos según tu ubicación.</p>
+          </details>
+
+          <details style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ff2c15; cursor: pointer;">
+            <summary style="font-weight: 600; font-size: 1.05rem; color: #262626; user-select: none;">¿Los repuestos tienen garantía?</summary>
+            <p style="margin-top: 1rem; color: #555555; line-height: 1.7;">Todos nuestros repuestos son originales o de calidad certificada y cuentan con la garantía del fabricante. Consulta en tienda para más detalles.</p>
+          </details>
+
+          <details style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ff2c15; cursor: pointer;">
+            <summary style="font-weight: 600; font-size: 1.05rem; color: #262626; user-select: none;">¿Aceptan devoluciones?</summary>
+            <p style="margin-top: 1rem; color: #555555; line-height: 1.7;">Sí, aceptamos devoluciones dentro de 7 días si el producto no ha sido utilizado. Consulta nuestras políticas en tienda o contacta con nosotros.</p>
+          </details>
+
+          <details style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ff2c15; cursor: pointer;">
+            <summary style="font-weight: 600; font-size: 1.05rem; color: #262626; user-select: none;">¿Cómo saber si un repuesto es compatible con mi vehículo?</summary>
+            <p style="margin-top: 1rem; color: #555555; line-height: 1.7;">Nuestro equipo de asesores te ayudará. Proporciona la marca, modelo y año de tu vehículo para confirmar la compatibilidad.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {{> footer}}
+  
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
