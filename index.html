@@ -1,13 +1,50 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>autoknls</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoKNLS - Repuestos y Accesorios Automotrices</title>
+  <link rel="icon" type="image/png" href="/logo-autoknls.png">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  {{> header}}
+  
+  <main>
+    <section class="hero" style="background: linear-gradient(135deg, #ff2c15 0%, #d60000 100%); color: white; padding: 4rem 0; text-align: center;">
+      <div class="container">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Bienvenido a AutoKNLS</h1>
+        <p style="font-size: 1.25rem; margin-bottom: 2rem;">Tu socio confiable en repuestos y accesorios automotrices</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="/repuestos.html" class="btn btn-outline" style="border-color: white; color: white;">Ver Repuestos</a>
+          <a href="/ubicaciones.html" class="btn btn-primary" style="background-color: white; color: #ff2c15;">Nuestras Ubicaciones</a>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding: 4rem 0;">
+      <div class="container">
+        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 3rem;">Nuestros Servicios</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+          <div style="text-align: center; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">
+            <h3>Repuestos Originales</h3>
+            <p>Amplia variedad de repuestos originales para todas las marcas</p>
+          </div>
+          <div style="text-align: center; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">
+            <h3>Accesorios Premium</h3>
+            <p>Los mejores accesorios para tu vehículo</p>
+          </div>
+          <div style="text-align: center; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">
+            <h3>Asesoría Experta</h3>
+            <p>Nuestro equipo te ayudará a encontrar lo que necesitas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {{> footer}}
+  
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>
