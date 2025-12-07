@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promociones - AutoKNLS</title>
+  <link rel="icon" type="image/png" href="/logo-autoknls.png">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  {{> header}}
+  
+  <main>
+    <section style="padding: 4rem 0;">
+      <div class="container">
+        <h1 style="font-size: 2.5rem; margin-bottom: 2rem; text-align: center;">Promociones Especiales</h1>
+        <p style="text-align: center; font-size: 1.125rem; margin-bottom: 3rem; color: #555555;">Aprovecha nuestras ofertas exclusivas</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+          <div style="border: 2px solid #ff2c15; padding: 2rem; border-radius: 8px; position: relative;">
+            <span style="position: absolute; top: -15px; left: 20px; background: #ff2c15; color: white; padding: 0.5rem 1rem; border-radius: 4px; font-weight: bold;">¡OFERTA!</span>
+            <h3 style="margin-bottom: 1rem; margin-top: 1rem;">Próximamente</h3>
+            <p>Estamos preparando increíbles ofertas para ti. ¡Mantente al tanto!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {{> footer}}
+  
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
