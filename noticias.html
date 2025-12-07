@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias - AutoKNLS</title>
+    <link rel="icon" type="image/png" href="/logo-autoknls.png">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+    {{> header}}
+
+    <main>
+        <section style="padding: 4rem 0;">
+            <div class="container">
+                <h1 style="font-size: 2.5rem; margin-bottom: 2rem; text-align: center;">Noticias AutoKNLS</h1>
+                <p style="text-align: center; font-size: 1.125rem; margin-bottom: 3rem; color: #555555;">Mantente
+                    informado sobre novedades, lanzamientos y eventos</p>
+
+                <div style="max-width: 880px; margin: 0 auto; display: grid; gap: 2rem;">
+                    <article
+                        style="background: #ffffff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); border-left: 4px solid #ff2c15;">
+                        <span
+                            style="display: inline-block; background: #ff2c15; color: white; padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.875rem; margin-bottom: 1rem;">Nueva
+                            apertura</span>
+                        <h3 style="margin-bottom: 0.75rem; font-size: 1.5rem;">Próximamente</h3>
+                        <p style="color: #555555; line-height: 1.7; margin-bottom: 0.5rem;">Estamos trabajando en
+                            contenido actualizado. Vuelve pronto para conocer nuestras últimas noticias.</p>
+                        <small style="color: #7b7b7b;">Fecha por confirmar</small>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {{> footer}}
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
