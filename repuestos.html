@@ -1,58 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Repuestos - AutoKNLS</title>
-  <link rel="icon" type="image/png" href="/logo-autoknls.png">
-  <link rel="stylesheet" href="/src/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repuestos - AutoKNLS</title>
+    <link rel="icon" type="image/png" href="/logo-autoknls.png">
+    <link rel="stylesheet" href="/src/style.css">
 </head>
+
 <body>
-  {{> header}}
-  
-  <main>
-    <section style="padding: 4rem 0;">
-      <div class="container">
-        <h1 style="font-size: 2.5rem; margin-bottom: 2rem; text-align: center;">Repuestos Automotrices</h1>
-        <p style="text-align: center; font-size: 1.125rem; margin-bottom: 3rem; color: #555555;">Amplio catálogo de repuestos originales para todas las marcas</p>
-        
-        <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-          <div style="background: #ffffff; border: 1px solid #d9d9d9; padding: 2rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-            <h3 style="margin-bottom: 1rem; color: #ff2c15;">Motor</h3>
-            <p style="color: #555555; line-height: 1.7;">Filtros, correas, pastillas, bombas de agua y más.</p>
-          </div>
-          <div style="background: #ffffff; border: 1px solid #d9d9d9; padding: 2rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-            <h3 style="margin-bottom: 1rem; color: #ff2c15;">Suspensión</h3>
-            <p style="color: #555555; line-height: 1.7;">Amortiguadores, resortes, rótulas y brazos de suspensión.</p>
-          </div>
-          <div style="background: #ffffff; border: 1px solid #d9d9d9; padding: 2rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-            <h3 style="margin-bottom: 1rem; color: #ff2c15;">Frenos</h3>
-            <p style="color: #555555; line-height: 1.7;">Discos, pastillas, cilindros y mangueras de freno.</p>
-          </div>
-          <div style="background: #ffffff; border: 1px solid #d9d9d9; padding: 2rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-            <h3 style="margin-bottom: 1rem; color: #ff2c15;">Transmisión</h3>
-            <p style="color: #555555; line-height: 1.7;">Aceites, filtros, embragues y componentes varios.</p>
-          </div>
-          <div style="background: #ffffff; border: 1px solid #d9d9d9; padding: 2rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-            <h3 style="margin-bottom: 1rem; color: #ff2c15;">Iluminación</h3>
-            <p style="color: #555555; line-height: 1.7;">Focos, faros LED, neblineros y módulos de control.</p>
-          </div>
-          <div style="background: #ffffff; border: 1px solid #d9d9d9; padding: 2rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-            <h3 style="margin-bottom: 1rem; color: #ff2c15;">Electricidad</h3>
-            <p style="color: #555555; line-height: 1.7;">Baterías, alternadores, starters y componentes eléctricos.</p>
-          </div>
-        </div>
+    <header>
+        {{> header}}
+    </header>
+    <main>
+        <section style="padding: 4rem 0;">
+            <div class="container">
+                <h1 style="font-size: 2.5rem; margin-bottom: 2rem; text-align: center;">Repuestos Automotrices</h1>
+                <p style="text-align: center; font-size: 1.125rem; margin-bottom: 3rem; color: #555555;">Amplio catálogo
+                    de repuestos originales para todas las marcas</p>
 
-        <div style="background: linear-gradient(135deg, #ff2c15 0%, #d60000 100%); color: white; padding: 2rem; border-radius: 8px; text-align: center;">
-          <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">¿Necesitas un repuesto específico?</p>
-          <a href="/ubicaciones.html" class="btn" style="background-color: white; color: #ff2c15; font-weight: 600; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; display: inline-block;">Visita Nuestras Sucursales</a>
-        </div>
-      </div>
-    </section>
-  </main>
+                <div
+                    style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                    <div
+                        style="background: #ffffff; border: 1px solid #d9d9d9; padding: 2rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <h3 style="margin-bottom: 1rem; color: #ff2c15;">Motor</h3>
+                        <p style="color: #555555; line-height: 1.7;">Filtros, correas, pastillas, bombas de agua y más.
+                        </p>
+                    </div>
+                    <div
+                        style="background: #ffffff; border: 1px solid #d9d9d9; padding: 2rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <h3 style="margin-bottom: 1rem; color: #ff2c15;">Suspensión</h3>
+                        <p style="color: #555555; line-height: 1.7;">Amortiguadores, resortes, rótulas y brazos de
+                            suspensión.</p>
+                    </div>
+                    <div
+                        style="background: #ffffff; border: 1px solid #d9d9d9; padding: 2rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <h3 style="margin-bottom: 1rem; color: #ff2c15;">Frenos</h3>
+                        <p style="color: #555555; line-height: 1.7;">Discos, pastillas, cilindros y mangueras de freno.
+                        </p>
+                    </div>
+                    <div
+                        style="background: #ffffff; border: 1px solid #d9d9d9; padding: 2rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <h3 style="margin-bottom: 1rem; color: #ff2c15;">Transmisión</h3>
+                        <p style="color: #555555; line-height: 1.7;">Aceites, filtros, embragues y componentes varios.
+                        </p>
+                    </div>
+                    <div
+                        style="background: #ffffff; border: 1px solid #d9d9d9; padding: 2rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <h3 style="margin-bottom: 1rem; color: #ff2c15;">Iluminación</h3>
+                        <p style="color: #555555; line-height: 1.7;">Focos, faros LED, neblineros y módulos de control.
+                        </p>
+                    </div>
+                    <div
+                        style="background: #ffffff; border: 1px solid #d9d9d9; padding: 2rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <h3 style="margin-bottom: 1rem; color: #ff2c15;">Electricidad</h3>
+                        <p style="color: #555555; line-height: 1.7;">Baterías, alternadores, starters y componentes
+                            eléctricos.</p>
+                    </div>
+                </div>
 
-  {{> footer}}
-  
-  <script type="module" src="/src/main.js"></script>
+                <div
+                    style="background: linear-gradient(135deg, #ff2c15 0%, #d60000 100%); color: white; padding: 2rem; border-radius: 8px; text-align: center;">
+                    <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">¿Necesitas un repuesto específico?</p>
+                    <a href="/ubicaciones.html" class="btn"
+                        style="background-color: white; color: #ff2c15; font-weight: 600; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; display: inline-block;">Visita
+                        Nuestras Sucursales</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+    {{> footer}}
+    </footer>
+    <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
