@@ -1,0 +1,170 @@
+<main>
+    <section class="compromiso-section">
+        <!-- Fondo decorativo con patrón -->
+        <div class="compromiso-bg-pattern"></div>
+
+        <!-- Contenedor principal -->
+        <div class="container compromiso-container">
+            <!-- Encabezado -->
+            <div class="compromiso-header">
+                <h1 class="compromiso-title">Nuestro Compromiso</h1>
+                <p class="compromiso-subtitle">Comprometidos con tu confianza, calidad y satisfacción</p>
+            </div>
+
+            <!-- Grid de compromisos -->
+            <div class="compromiso-grid">
+                <!-- Tarjeta 1: Calidad -->
+                <div class="compromiso-card">
+                    <div class="compromiso-icon">⚙️</div>
+                    <h3 class="compromiso-card-title">Calidad Garantizada</h3>
+                    <p class="compromiso-card-text">
+                        Solo trabajamos con marcas y proveedores certificados para asegurar desempeño y durabilidad.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 2: Disponibilidad -->
+                <div class="compromiso-card">
+                    <div class="compromiso-icon">📦</div>
+                    <h3 class="compromiso-card-title">Disponibilidad</h3>
+                    <p class="compromiso-card-text">
+                        Bodegas con productos nuevos y alternativas compatibles para que encuentres lo que necesitas sin esperar.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 3: Asesoría -->
+                <div class="compromiso-card">
+                    <div class="compromiso-icon">👨‍🔧</div>
+                    <h3 class="compromiso-card-title">Asesoría Experta</h3>
+                    <p class="compromiso-card-text">
+                        Equipo especializado para guiarte en repuestos y accesorios según tu vehículo y tu presupuesto.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 4: Servicio -->
+                <div class="compromiso-card">
+                    <div class="compromiso-icon">⚡</div>
+                    <h3 class="compromiso-card-title">Servicio Ágil</h3>
+                    <p class="compromiso-card-text">
+                        Procesos claros, tiempos de respuesta cortos y comunicación transparente en cada pedido.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* ===== SECCIÓN PRINCIPAL ===== */
+        .compromiso-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, rgba(255, 44, 21, 0.95) 0%, rgba(255, 100, 70, 0.95) 100%),
+                        url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 800%22><defs><pattern id=%22gears%22 x=%220%22 y=%220%22 width=%22200%22 height=%22200%22 patternUnits=%22userSpaceOnUse%22 opacity=%220.05%22><circle cx=%22100%22 cy=%22100%22 r=%2260%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22/><path d=%22M100,40 L110,30 L120,40 L110,50 Z%22 fill=%22white%22/><path d=%22M160,100 L170,90 L180,100 L170,110 Z%22 fill=%22white%22/><path d=%22M100,160 L110,170 L120,160 L110,150 Z%22 fill=%22white%22/><path d=%22M40,100 L30,90 L20,100 L30,110 Z%22 fill=%22white%22/></pattern></defs><rect width=%221200%22 height=%22800%22 fill=%22url(%23gears)%22/></svg>') center/cover;
+            background-attachment: fixed;
+            color: white;
+            position: relative;
+        }
+
+        /* Patrón decorativo */
+        .compromiso-bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22none%22 stroke=%22white%22 stroke-width=%220.5%22 opacity=%220.1%22/></svg>') repeat;
+            pointer-events: none;
+        }
+
+        /* Contenedor con posicionamiento relativo */
+        .compromiso-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== ENCABEZADO ===== */
+        .compromiso-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .compromiso-title {
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .compromiso-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ===== GRID DE TARJETAS ===== */
+        .compromiso-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* ===== TARJETAS ===== */
+        .compromiso-card {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .compromiso-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Icono de la tarjeta */
+        .compromiso-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Título de la tarjeta */
+        .compromiso-card-title {
+            color: #ff2c15;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Texto de la tarjeta */
+        .compromiso-card-text {
+            color: #434343;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .compromiso-section {
+                padding: 2rem 0;
+            }
+
+            .compromiso-title {
+                font-size: 2rem;
+            }
+
+            .compromiso-subtitle {
+                font-size: 1rem;
+            }
+
+            .compromiso-grid {
+                gap: 1.5rem;
+            }
+
+            .compromiso-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</main>
