@@ -1,0 +1,66 @@
+@import '../variables.less';
+
+.faq {
+  padding: @spacing-xl 0;
+  background-color: @color-background;
+
+  &__title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: @spacing-md;
+    color: @color-primary;
+  }
+
+  &__subtitle {
+    font-size: 1.125rem;
+    text-align: center;
+    margin-bottom: @spacing-xl;
+    color: @color-text-light;
+  }
+
+  &__list {
+    max-width: 880px;
+    margin: 0 auto;
+    display: grid;
+    gap: @spacing-md;
+  }
+
+  &__item {
+    background: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid @color-primary;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: lighten(#f5f5f5, 5%);
+      transform: translateY(-2px);
+    }
+
+    & summary {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: @color-text;
+      user-select: none;
+    }
+
+    & p,
+    & ul {
+      margin-top: 1rem;
+      color: @color-text-light;
+      line-height: 1.7;
+    }
+
+    & ul {
+      padding-left: 1.25rem;
+      list-style-type: disc;
+    }
+  }
+}
+
+@media (max-width: @breakpoint-tablet) {
+  .faq__list {
+    gap: @spacing-sm;
+  }
+}
