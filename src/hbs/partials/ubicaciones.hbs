@@ -1,0 +1,147 @@
+<main>
+    <section class="sucursales-section">
+        <!-- Patrón decorativo del fondo -->
+        <div class="sucursales-bg-pattern"></div>
+
+        <div class="container sucursales-container">
+            <!-- Encabezado -->
+            <div class="sucursales-header">
+                <h1 class="sucursales-title">Nuestras Ubicaciones</h1>
+                <p class="sucursales-subtitle">Encuéntranos en tu ciudad</p>
+            </div>
+
+            <!-- Grid de sucursales -->
+          <!-- GRID -->
+            <div class="sucursales-grid">
+
+                <!-- TEGUCIGALPA -->
+                <div class="sucursal-card">
+                    <h3 class="sucursal-card-title">Sucursal Tegucigalpa</h3>
+                    <p class="sucursal-card-text"><strong>Dirección:</strong> Boulevard Suyapa, frente a Mall Las Cascadas, Tegucigalpa</p>
+                    <p class="sucursal-card-text"><strong>Teléfono:</strong> +504 2234-5678</p>
+                    <p class="sucursal-card-text"><strong>Horario:</strong> Lun–Vie 8:00–18:00, Sáb 8:00–14:00</p>
+                </div>
+
+                <!-- SAN PEDRO SULA -->
+                <div class="sucursal-card">
+                    <h3 class="sucursal-card-title">Sucursal San Pedro Sula</h3>
+                    <p class="sucursal-card-text"><strong>Dirección:</strong> Colonia Altamira, 2da calle, San Pedro Sula, Cortés</p>
+                    <p class="sucursal-card-text"><strong>Teléfono:</strong> +504 2555-8899</p>
+                    <p class="sucursal-card-text"><strong>Horario:</strong> Lun–Vie 8:00–18:00, Sáb 8:00–14:00</p>
+                </div>
+
+                <!-- LA CEIBA -->
+                <div class="sucursal-card">
+                    <h3 class="sucursal-card-title">Sucursal La Ceiba</h3>
+                    <p class="sucursal-card-text"><strong>Dirección:</strong> Barrio La Isla, Avenida San Isidro, La Ceiba, Atlántida</p>
+                    <p class="sucursal-card-text"><strong>Teléfono:</strong> +504 2444-9988</p>
+                    <p class="sucursal-card-text"><strong>Horario:</strong> Lun–Vie 8:00–17:00, Sáb 8:00–13:00</p>
+                </div>
+
+                <!-- CHOLUTECA -->
+                <div class="sucursal-card">
+                    <h3 class="sucursal-card-title">Sucursal Choluteca</h3>
+                    <p class="sucursal-card-text"><strong>Dirección:</strong> Barrio El Centro, Calle Principal, Choluteca</p>
+                    <p class="sucursal-card-text"><strong>Teléfono:</strong> +504 2787-6655</p>
+                    <p class="sucursal-card-text"><strong>Horario:</strong> Lun–Vie 8:00–17:00</p>
+                </div>
+
+                <!-- COMAYAGUA -->
+                <div class="sucursal-card">
+                    <h3 class="sucursal-card-title">Sucursal Comayagua</h3>
+                    <p class="sucursal-card-text"><strong>Dirección:</strong> Boulevard Roberto Romero Larios, Comayagua</p>
+                    <p class="sucursal-card-text"><strong>Teléfono:</strong> +504 2710-3344</p>
+                    <p class="sucursal-card-text"><strong>Horario:</strong> Lun–Vie 8:00–18:00</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ESTILOS ADAPTADOS -->
+    <style>
+        .sucursales-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, rgba(255, 44, 21, 0.95) 0%, rgba(255, 100, 70, 0.95) 100%);
+            color: white;
+            position: relative;
+        }
+
+        .sucursales-bg-pattern {
+            position: absolute;
+            inset: 0;
+            background: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22none%22 stroke=%22white%22 stroke-width=%220.5%22 opacity=%220.1%22/></svg>') repeat;
+            pointer-events: none;
+        }
+
+        .sucursales-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .sucursales-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .sucursales-title {
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .sucursales-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .sucursales-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .sucursal-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            color: #333;
+        }
+
+        .sucursal-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 48px rgba(0,0,0,0.25);
+        }
+
+        .sucursal-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .sucursal-card-title {
+            color: #ff2c15;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .sucursal-card-text {
+            margin: 0.3rem 0;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .sucursales-section {
+                padding: 2rem 0;
+            }
+
+            .sucursales-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</main>
