@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^7.2.4"
+    "less": "^4.4.2",
+    "vite": "^7.2.4",
+    "vite-plugin-handlebars": "^2.0.0"
   }
 }

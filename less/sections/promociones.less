@@ -1,0 +1,72 @@
+.promociones-hero {
+    padding: @spacing-lg 0;
+    text-align: center;
+    background-color: @secondary-50;
+}
+
+.page-title {
+    color: @primary-500;
+    font-size: 2.5rem;
+    margin-bottom: @spacing-xs;
+}
+
+.page-subtitle {
+    font-size: 1.125rem;
+    margin-bottom: @spacing-xl;
+    color: @secondary-600; 
+}
+
+
+.promo-card {
+    border: 1px solid @secondary-200;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 8px fade(@secondary-700, 10%); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-@spacing-xs);
+        box-shadow: 0 8px 16px fade(@secondary-700, 20%);
+    }
+
+    .promo-img-container {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .promo-content {
+        padding: @spacing-md;
+        
+        .promo-title {
+            margin-top: @spacing-xs;
+            color: @secondary-700; 
+            font-size: 1.5rem;
+        }
+        .promo-description, .promo-price {
+            color: @secondary-500; 
+            margin-bottom: @spacing-sm;
+        }
+    }
+}
+
+.discount-tag {
+    display: inline-block;
+    background-color: @primary-500; 
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: @spacing-sm;
+    
+    &.is-secondary {
+        background-color: @secondary-700; 
+    }
+}

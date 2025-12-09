@@ -1,0 +1,128 @@
+.noticias-hero {
+    .promociones-hero();
+}
+
+.noticias-container {
+    display: flex;
+    gap: @spacing-lg;
+    padding: @spacing-lg 0;
+
+    @media (min-width: @breakpoint-desktop) { 
+        .post-list {
+            flex: 3;
+        }
+        .sidebar {
+            flex: 1;
+        }
+    }
+}
+
+.post-excerpt {
+    display: flex;
+    align-items: center;
+    margin-bottom: @spacing-md;
+    border-bottom: 1px solid @secondary-200;
+    padding-bottom: @spacing-md;
+    
+    .post-image {
+        width: 250px;
+        height: 150px;
+        margin-right: @spacing-md;
+        overflow: hidden;
+        border-radius: 4px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .post-meta {
+        color: @secondary-500;
+        font-size: 0.9rem;
+        margin-bottom: @spacing-xs;
+    }
+    
+    .post-title {
+        color: @secondary-900; 
+        font-size: 1.8rem;
+        margin: 0 0 @spacing-sm 0;
+    }
+
+    .post-summary {
+        color: @secondary-600;
+        margin-bottom: @spacing-md;
+    }
+    
+    .read-more {
+        color: @primary-500;
+        text-decoration: none;
+        font-weight: bold;
+        
+        &:hover {
+            color: @primary-700;
+            text-decoration: underline;
+        }
+    }
+}
+
+.sidebar {
+    padding: @spacing-md;
+    background-color: @secondary-50;
+    border-radius: 8px;
+    height: fit-content;
+    
+    .sidebar-title {
+        color: @secondary-700;
+        border-bottom: 2px solid @secondary-200;
+        padding-bottom: @spacing-sm;
+        margin-top: 0;
+        margin-bottom: @spacing-md;
+    }
+    
+    .category-list {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-bottom: @spacing-sm;
+            a {
+                color: @secondary-600;
+                &:hover {
+                    color: @primary-500;
+                }
+            }
+        }
+    }
+    
+    .promo-callout {
+        margin-top: @spacing-lg;
+        background-color: @primary-100; 
+        padding: @spacing-md;
+        border-radius: 4px;
+        text-align: center;
+        
+        .sidebar-title {
+            border-bottom: none;
+            color: @secondary-900;
+        }
+    }
+}
+
+@media (max-width: @breakpoint-tablet) {
+    .noticias-container {
+        flex-direction: column;
+    }
+    .post-excerpt {
+        flex-direction: column;
+        align-items: flex-start;
+        
+        .post-image {
+            width: 100%;
+            height: 200px;
+            margin-right: 0;
+            margin-bottom: @spacing-sm;
+        }
+    }
+}
