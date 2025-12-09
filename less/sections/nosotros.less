@@ -1,0 +1,111 @@
+@import '../variables.less';
+
+.nosotros {
+    padding: @spacing-xl 0;
+    background-color: @color-background;
+
+    &__title {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: @spacing-md;
+        color: @color-primary;
+    }
+
+    &__subtitle {
+        text-align: center;
+        font-size: 1.125rem;
+        margin-bottom: @spacing-xl;
+        color: @color-text-light;
+    }
+
+    &__content {
+        max-width: 880px;
+        margin: 0 auto;
+        display: grid;
+        gap: @spacing-xl;
+    }
+
+    &__about {
+        background-color: #ffffff;
+        padding: 2.5rem;
+        border-radius: 8px;
+        border: 1px solid #000000; // marco fino
+
+        h2 {
+            margin-bottom: 1.5rem;
+            color: @color-primary;
+            font-size: 1.75rem;
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.8;
+            color: @color-text;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__mission-vision {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: @spacing-lg;
+
+        .nosotros__card {
+            text-align: center;
+            padding: 2rem;
+            background-color: @secondary-50;
+            border-radius: 8px;
+            border: 1px solid #000000; // marco fino
+
+            h3 {
+                margin-bottom: @spacing-sm;
+                font-size: 1.5rem;
+                color: @color-primary;
+            }
+
+            p {
+                line-height: 1.7;
+                color: @color-text-light;
+            }
+        }
+    }
+
+    &__values {
+        background: linear-gradient(135deg, #ff4d3b 0%, #d60000 100%);
+        color: white;
+        padding: 2.5rem;
+        border-radius: 8px;
+        text-align: center;
+        border: 1px solid #000000; // marco fino
+
+        h3 {
+            margin-bottom: @spacing-md;
+            font-size: 1.75rem;
+            color: white;
+        }
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: @spacing-md;
+            justify-content: center;
+
+            span {
+                background: rgba(255, 255, 255, 0.2);
+                padding: 0.75rem 1.5rem;
+                border-radius: 6px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+@media (max-width: @breakpoint-tablet) {
+    .nosotros__mission-vision {
+        grid-template-columns: 1fr;
+    }
+
+    .nosotros__values {
+        padding: @spacing-lg;
+    }
+}
