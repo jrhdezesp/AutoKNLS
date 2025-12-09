@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticias - AutoKNLS</title>
+    <title>Noticias y Blog - AutoKNLS</title>
     <link rel="icon" type="image/png" href="/logo-autoknls.png">
     <link rel="stylesheet" href="/src/style.css">
 </head>
@@ -13,24 +13,62 @@
     {{> header}}
 
     <main>
-        <section style="padding: 4rem 0;">
+        <section class="noticias-hero">
             <div class="container">
-                <h1 style="font-size: 2.5rem; margin-bottom: 2rem; text-align: center;">Noticias AutoKNLS</h1>
-                <p style="text-align: center; font-size: 1.125rem; margin-bottom: 3rem; color: #555555;">Mantente
-                    informado sobre novedades, lanzamientos y eventos</p>
+                <h1 class="page-title">Novedades y Consejos para el Motor</h1>
+                <p class="page-subtitle">Mantente al día con guías de mantenimiento, lanzamientos de repuestos y noticias del sector automotriz.</p>
+            </div>
+        </section>
 
-                <div style="max-width: 880px; margin: 0 auto; display: grid; gap: 2rem;">
-                    <article
-                        style="background: #ffffff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); border-left: 4px solid #ff2c15;">
-                        <span
-                            style="display: inline-block; background: #ff2c15; color: white; padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.875rem; margin-bottom: 1rem;">Nueva
-                            apertura</span>
-                        <h3 style="margin-bottom: 0.75rem; font-size: 1.5rem;">Próximamente</h3>
-                        <p style="color: #555555; line-height: 1.7; margin-bottom: 0.5rem;">Estamos trabajando en
-                            contenido actualizado. Vuelve pronto para conocer nuestras últimas noticias.</p>
-                        <small style="color: #7b7b7b;">Fecha por confirmar</small>
+        <section class="noticias-content">
+            <div class="container noticias-container">
+                
+                <div class="post-list">
+                    
+                    <article class="post-excerpt">
+                        <div class="post-image">
+                            <img src="/img/noticia_aceite.jpg" alt="Motor y cambio de aceite">
+                        </div>
+                        <div class="post-body">
+                            <p class="post-meta">Categoría: Mantenimiento | 01 de Dic, 2025</p>
+                            <h2 class="post-title">Guía para Novatos: Los 5 Repuestos que Debes Revisar Siempre</h2>
+                            <p class="post-summary">Un chequeo preventivo te ahorrará costosas reparaciones. Focos, fluidos, llantas... aprende a identificarlos.</p>
+                            <a href="/blog-post-1.html" class="read-more">Continuar Leyendo &rarr;</a>
+                        </div>
                     </article>
+
+                    <article class="post-excerpt">
+                        <div class="post-image">
+                            <img src="/img/noticia_frenos.jpg" alt="Frenos ABS">
+                        </div>
+                        <div class="post-body">
+                            <p class="post-meta">Categoría: Tecnología | 25 de Nov, 2025</p>
+                            <h2 class="post-title">¿Cómo Funcionan los Frenos ABS y Cuándo Reemplazar los Sensores?</h2>
+                            <p class="post-summary">Un análisis de la tecnología de frenado moderna y señales clave para el mantenimiento de tus repuestos ABS.</p>
+                            <a href="/blog-post-2.html" class="read-more">Continuar Leyendo &rarr;</a>
+                        </div>
+                    </article>
+
                 </div>
+                
+                <aside class="sidebar">
+                    <div class="sidebar-block">
+                        <h3 class="sidebar-title">Categorías Populares</h3>
+                        <ul class="category-list">
+                            <li><a href="#">Mantenimiento (8)</a></li>
+                            <li><a href="#">Guías de Compra (5)</a></li>
+                            <li><a href="#">Novedades de AutoKNLS (3)</a></li>
+                            <li><a href="#">Tecnología (12)</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-block promo-callout">
+                        <h3 class="sidebar-title">¡Ofertas Aquí!</h3>
+                        <p>No te pierdas los descuentos más calientes de la semana en nuestra sección de promociones.</p>
+                        <a href="promociones.html" class="btn btn-primary">Ver Promos</a>
+                    </div>
+                </aside>
+
             </div>
         </section>
     </main>
