@@ -1,3 +1,51 @@
+.brands-carousel-container {
+    width: 100%;
+    padding: 1rem 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: @color-white;
+    border-radius: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    overflow-x: auto;
+}
+
+.brands-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+}
+
+.brand-item {
+    padding: 0.5rem 1.5rem;
+    background: @primary-100;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: @primary-700;
+    white-space: nowrap;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    margin: 0.5rem 0;
+    transition: background 0.2s;
+    &:hover {
+        background: @primary-200;
+    }
+}
+
+@media (max-width: 600px) {
+    .brands-carousel {
+        gap: 0.5rem;
+    }
+    .brand-item {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.95rem;
+    }
+}
 // Estilos específicos del Landing Page (index.html)
 
 // Hero Carousel
