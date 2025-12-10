@@ -1,11 +1,26 @@
 # AutoKNLS
 
 ## Logo
-![AutoKNLS Logo](./logo-autoknls.png)
+<img src="./logo-autoknls.png" alt="AutoKNLS Logo" width="200" height="auto">
 
 ## Descripción
 
-AutoKNLS es una plataforma web moderna diseñada para brindar información integral sobre servicios, productos y noticias relacionados con la industria automotriz. El sitio proporciona una experiencia de usuario fluida y responsive, con acceso a información sobre accesorios, repuestos, aplicaciones, promociones y más.
+AutoKNLS es una página web basada en una tienda de venta de repuestos automotrices, la cual incluye:
+
+- **Página de inicio** - Bienvenida y presentación de la empresa
+- **Aplicación** - Información sobre aplicaciones móviles y digitales
+- **Accesorios** - Catálogo completo de accesorios automotrices
+- **Repuestos** - Amplia variedad de repuestos originales y compatibles
+- **Promociones** - Ofertas y promociones especiales vigentes
+- **Noticias** - Últimas noticias del sector automotriz
+- **Blog** - Artículos educativos y consejos de mantenimiento
+- **Ubicaciones** - Sucursales y puntos de servicio disponibles
+- **Historia** - Trayectoria y experiencia de la empresa
+- **Nosotros** - Información corporativa y misión
+- **Compromiso** - Valores y compromisos con nuestros clientes
+- **FAQ** - Preguntas frecuentes y soporte al cliente
+
+La plataforma proporciona una experiencia de usuario fluida y responsive, con acceso a información integral sobre servicios y productos relacionados con la industria automotriz.
 
 ## Tecnologías Utilizadas
 
