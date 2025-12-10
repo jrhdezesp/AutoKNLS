@@ -1,0 +1,88 @@
+@import '../variables.less';
+
+// Estilos para la página de Historia (historia.html)
+
+.historia {
+    padding: @spacing-xl 0;
+    background: @color-white;
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: @spacing-lg;
+        text-align: center;
+        color: @secondary-800;
+    }
+
+    // Timeline de historia
+    .historia-timeline {
+        max-width: 820px;
+        margin: 0 auto;
+        display: grid;
+        gap: @spacing-lg;
+    }
+
+    // Artículo de historia individual
+    .historia-article {
+        background: @color-background;
+        padding: @spacing-lg;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border-left: 4px solid @primary-500;
+
+        h3 {
+            margin-bottom: @spacing-md;
+            color: @primary-500;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+        p {
+            line-height: 1.7;
+            color: @secondary-700;
+            margin: 0;
+        }
+
+        &:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+            transform: translateY(-4px);
+        }
+    }
+}
+
+// Responsive design
+@media (max-width: @breakpoint-tablet) {
+    .historia {
+        padding: @spacing-lg 0;
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: @spacing-lg;
+        }
+
+        .historia-timeline {
+            gap: @spacing-md;
+        }
+    }
+}
+
+@media (max-width: @breakpoint-mobile) {
+    .historia {
+        h1 {
+            font-size: 1.75rem;
+        }
+
+        .historia-article {
+            padding: @spacing-md;
+
+            h3 {
+                font-size: 1.25rem;
+                margin-bottom: @spacing-sm;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
+    }
+}

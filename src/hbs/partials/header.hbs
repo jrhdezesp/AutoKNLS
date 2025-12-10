@@ -1,16 +1,26 @@
 <header class="header">
-    <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; width: 100%;">
-        <a href="/" style="flex-shrink: 0; display: flex; align-items: center;">
+    <div class="header-container">
+        <a href="/" class="header-logo">
             <img src="/logo-autoknls.png" alt="AutoKNLS" class="logo">
         </a>
-        <nav class="nav">
-            <a href="/">Inicio</a>
-            <a href="/ubicaciones.html">Ubicaciones</a>
-            <a href="/repuestos.html">Repuestos</a>
-            <a href="/noticias.html">Noticias</a>
+        
+        <!-- Botón Hamburguesa -->
+        <button class="header-hamburger" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <!-- Navegación -->
+        <nav class="nav" id="navMenu">
+            <a href="/" class="nav-link">Inicio</a>
+            <a href="/ubicaciones.html" class="nav-link">Ubicaciones</a>
+            <a href="/repuestos.html" class="nav-link">Repuestos</a>
+            <a href="/noticias.html" class="nav-link">Noticias</a>
+            
             <div class="menu-dropdown">
-                <button class="menu-toggle">Más ▼</button>
-                <ul class="menu-items">
+                <button class="menu-toggle" id="moreBtn">Más ▼</button>
+                <ul class="menu-items" id="moreMenu">
                     <li><a href="/promociones.html">Promociones</a></li>
                     <li><a href="/accesorios.html">Accesorios</a></li>
                     <li><a href="/nosotros.html">Nosotros</a></li>

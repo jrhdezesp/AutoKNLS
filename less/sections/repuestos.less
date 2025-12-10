@@ -1,0 +1,154 @@
+@import '../variables.less';
+
+// Estilos para la página de Repuestos (repuestos.html)
+
+.repuestos {
+    padding: @spacing-xl 0;
+    background: @color-white;
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: @spacing-lg;
+        text-align: center;
+        color: @secondary-800;
+    }
+
+    .container > p {
+        text-align: center;
+        font-size: 1.125rem;
+        margin: 0 auto @spacing-xl;
+        max-width: 720px;
+        color: @color-text-light;
+    }
+
+    // Grid de categorías de repuestos
+    .repuestos-grid {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: @spacing-lg;
+        margin-bottom: @spacing-xl;
+    }
+
+    // Tarjeta de categoría individual
+    .repuestos-card {
+        background: @color-white;
+        border: 1px solid @color-border;
+        padding: @spacing-lg;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+
+        h3 {
+            margin-bottom: @spacing-md;
+            color: @primary-500;
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: @spacing-sm;
+            display: inline-block;
+        }
+
+        p {
+            color: @color-text-light;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        &:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+            transform: translateY(-2px);
+            border-color: @primary-500;
+        }
+    }
+
+    // Sección CTA
+    .repuestos-cta {
+        background: linear-gradient(135deg, @primary-500 0%, @primary-900 100%);
+        color: @color-white;
+        padding: @spacing-lg;
+        border-radius: 8px;
+        text-align: center;
+
+        p {
+            font-size: 1.125rem;
+            margin-bottom: @spacing-md;
+            color: @color-white;
+        }
+
+        .btn {
+            background-color: @color-white;
+            color: @primary-500;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            }
+        }
+    }
+}
+
+// Responsive design
+@media (max-width: @breakpoint-tablet) {
+    .repuestos {
+        padding: @spacing-lg 0;
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: @spacing-lg;
+        }
+
+        .repuestos-grid {
+            grid-template-columns: 1fr;
+            gap: @spacing-md;
+        }
+
+        .repuestos-cta {
+            padding: @spacing-lg @spacing-md;
+        }
+    }
+}
+
+@media (max-width: @breakpoint-mobile) {
+    .repuestos {
+        h1 {
+            font-size: 1.75rem;
+        }
+
+        > .container > p {
+            font-size: 1rem;
+        }
+
+        .repuestos-card {
+            padding: @spacing-md;
+
+            h3 {
+                font-size: 1.125rem;
+                margin-bottom: @spacing-sm;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
+
+        .repuestos-cta {
+            padding: @spacing-md;
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}

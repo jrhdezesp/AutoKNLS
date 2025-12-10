@@ -1,0 +1,116 @@
+// Estilos base globales
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: @font-family-base;
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+    color: @color-text;
+    background-color: @color-white;
+    overflow-x: hidden;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    min-height: 60vh;
+}
+
+a {
+    color: @color-primary;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: @primary-700;
+    }
+}
+
+.container {
+    max-width: @breakpoint-wide;
+    margin: 0 auto;
+    padding: 0 @spacing-md;
+}
+
+section {
+    h1 {
+        color: @color-text-light;
+    }
+
+    h2 {
+        color: @color-text;
+    }
+
+    h3 {
+        color: @color-primary;
+    }
+}
+
+// Utility classes for layouts
+.flex {
+    display: flex;
+
+    &-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-between {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-wrap {
+        flex-wrap: wrap;
+    }
+
+    &-gap {
+        &-sm {
+            gap: @spacing-sm;
+        }
+
+        &-md {
+            gap: @spacing-md;
+        }
+
+        &-lg {
+            gap: @spacing-lg;
+        }
+    }
+}
+
+.grid {
+    display: grid;
+
+    &-auto {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    &-gap {
+        &-md {
+            gap: @spacing-md;
+        }
+
+        &-lg {
+            gap: @spacing-lg;
+        }
+    }
+}
+
+@media (max-width: @breakpoint-tablet) {
+    main {
+        min-height: auto;
+    }
+}

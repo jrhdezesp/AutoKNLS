@@ -1,0 +1,145 @@
+@import '../variables.less';
+
+// Estilos para la página de Compromiso (compromiso.html)
+
+.compromiso-section {
+    padding: @spacing-xl 0;
+    background: linear-gradient(135deg, rgba(255, 44, 21, 0.95) 0%, rgba(255, 100, 70, 0.95) 100%),
+                url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 800%22><defs><pattern id=%22gears%22 x=%220%22 y=%220%22 width=%22200%22 height=%22200%22 patternUnits=%22userSpaceOnUse%22 opacity=%220.05%22><circle cx=%22100%22 cy=%22100%22 r=%2260%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22/></pattern></defs><rect width=%221200%22 height=%22800%22 fill=%22url(%23gears)%22/></svg>') center/cover;
+    background-attachment: fixed;
+    color: @color-white;
+    position: relative;
+
+    .compromiso-bg-pattern {
+        position: absolute;
+        inset: 0;
+        background: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22none%22 stroke=%22white%22 stroke-width=%220.5%22 opacity=%220.1%22/></svg>') repeat;
+        pointer-events: none;
+    }
+
+    .compromiso-container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .compromiso-header {
+        text-align: center;
+        margin-bottom: @spacing-xl;
+    }
+
+    .compromiso-title {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: @spacing-md;
+        color: @color-white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .compromiso-subtitle {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.95);
+        margin: 0;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    // Grid de compromisos
+    .compromiso-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: @spacing-lg;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    // Tarjeta de compromiso individual
+    .compromiso-card {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 12px;
+        padding: @spacing-lg;
+        text-align: center;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.25);
+        }
+
+        .compromiso-icon {
+            font-size: 2.5rem;
+            margin-bottom: @spacing-md;
+            display: block;
+        }
+
+        .compromiso-card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: @spacing-sm;
+            color: @primary-500;
+        }
+
+        .compromiso-card-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #434343;
+            margin: 0;
+        }
+    }
+}
+
+// Responsive design
+@media (max-width: @breakpoint-tablet) {
+    .compromiso-section {
+        padding: @spacing-lg 0;
+
+        .compromiso-title {
+            font-size: 2rem;
+        }
+
+        .compromiso-subtitle {
+            font-size: 1rem;
+        }
+
+        .compromiso-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: @spacing-md;
+        }
+    }
+}
+
+@media (max-width: @breakpoint-mobile) {
+    .compromiso-section {
+        padding: @spacing-lg @spacing-md;
+
+        .compromiso-title {
+            font-size: 1.75rem;
+        }
+
+        .compromiso-subtitle {
+            font-size: 1rem;
+        }
+
+        .compromiso-grid {
+            grid-template-columns: 1fr;
+            gap: @spacing-md;
+        }
+
+        .compromiso-card {
+            padding: @spacing-md;
+
+            .compromiso-icon {
+                font-size: 2.5rem;
+            }
+
+            .compromiso-card-title {
+                font-size: 1.25rem;
+                margin-bottom: @spacing-sm;
+            }
+
+            .compromiso-card-text {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

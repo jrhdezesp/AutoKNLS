@@ -1,0 +1,253 @@
+<main>
+    <!-- Hero Section con Carrusel de Imágenes -->
+    <section class="hero-carousel">
+      <div class="carousel-container">
+        <div class="carousel-track" id="heroCarousel">
+          <div class="carousel-slide hero-slide hero-slide-primary">
+            <div class="carousel-content">
+              <h1>Bienvenido a AutoKNLS</h1>
+              <p>Tu socio confiable en repuestos y accesorios automotrices de calidad premium</p>
+              <div class="hero-buttons">
+                <a href="/repuestos.html" class="btn btn-white">Ver Repuestos</a>
+                <a href="/ubicaciones.html" class="btn btn-outline-white">Nuestras Ubicaciones</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide hero-slide hero-slide-secondary">
+            <div class="carousel-content">
+              <h1>Repuestos Originales</h1>
+              <p>Amplia variedad de repuestos auténticos para todas las marcas</p>
+              <div class="hero-buttons">
+                <a href="/repuestos.html" class="btn btn-white">Explorar Catálogo</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide hero-slide hero-slide-tertiary">
+            <div class="carousel-content">
+              <h1>Accesorios Premium</h1>
+              <p>Mejora tu vehículo con nuestros accesorios de alta calidad</p>
+              <div class="hero-buttons">
+                <a href="/accesorios.html" class="btn btn-white">Ver Accesorios</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-nav carousel-prev" onclick="moveCarousel(-1)">&#10094;</button>
+        <button class="carousel-nav carousel-next" onclick="moveCarousel(1)">&#10095;</button>
+        <div class="carousel-dots" id="heroDots"></div>
+      </div>
+    </section>
+
+    <!-- Sección: Ubicaciones -->
+    <section class="section-landing">
+      <div class="container">
+        <h2>Nuestras Ubicaciones</h2>
+        <p class="section-subtitle">Encuentra AutoKNLS cerca de ti</p>
+        <div class="locations-grid">
+          <div class="location-card">
+            <h3>Centro</h3>
+            <p>📍 Dirección Centro</p>
+            <p>Lun-Sab: 8:00-18:00</p>
+            <a href="/ubicaciones.html" class="btn btn-primary">Ver Detalles</a>
+          </div>
+          <div class="location-card">
+            <h3>Sur</h3>
+            <p>📍 Dirección Sur</p>
+            <p>Lun-Sab: 9:00-19:00</p>
+            <a href="/ubicaciones.html" class="btn btn-primary">Ver Detalles</a>
+          </div>
+          <div class="location-card">
+            <h3>Norte</h3>
+            <p>📍 Dirección Norte</p>
+            <p>Lun-Sab: 8:30-18:30</p>
+            <a href="/ubicaciones.html" class="btn btn-primary">Ver Detalles</a>
+          </div>
+        </div>
+        <div class="section-cta">
+          <a href="/ubicaciones.html" class="btn btn-primary-lg">Ver Todas Nuestras Ubicaciones</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Carrusel de Marcas -->
+    <section class="section-brands">
+      <div class="container">
+        <h2>Marcas que Ofrecemos</h2>
+        <p class="section-subtitle">Trabajamos con las mejores marcas del mercado</p>
+        
+        <div class="brands-carousel-container">
+          <div class="brands-carousel" id="brandsCarousel">
+            <!-- 16 marcas en 4 columnas -->
+            <div class="brand-item">Bosch</div>
+            <div class="brand-item">Michelin</div>
+            <div class="brand-item">Goodyear</div>
+            <div class="brand-item">Continental</div>
+            
+            <div class="brand-item">Pirelli</div>
+            <div class="brand-item">Bridgestone</div>
+            <div class="brand-item">Dunlop</div>
+            <div class="brand-item">Yokohama</div>
+            
+            <div class="brand-item">Hankook</div>
+            <div class="brand-item">Firestone</div>
+            <div class="brand-item">Kumho</div>
+            <div class="brand-item">Toyo</div>
+            
+            <div class="brand-item">Falken</div>
+            <div class="brand-item">Maxxis</div>
+            <div class="brand-item">Kenda</div>
+            <div class="brand-item">Cooper</div>
+
+            <!-- Duplicar primeras 4 para loop continuo -->
+            <div class="brand-item">Bosch</div>
+            <div class="brand-item">Michelin</div>
+            <div class="brand-item">Goodyear</div>
+            <div class="brand-item">Continental</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Repuestos Destacados -->
+    <section class="section-landing section-alt">
+      <div class="container">
+        <h2>Repuestos Destacados</h2>
+        <p class="section-subtitle">Nuestros productos más solicitados</p>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-image">🔧</div>
+            <h3>Motor</h3>
+            <p>Filtros, correas, pastillas, bombas de agua y más componentes.</p>
+            <a href="/repuestos.html" class="btn btn-secondary">Ver Repuestos</a>
+          </div>
+          <div class="product-card">
+            <div class="product-image">🛑</div>
+            <h3>Frenos</h3>
+            <p>Discos, pastillas, cilindros y mangueras de freno de calidad.</p>
+            <a href="/repuestos.html" class="btn btn-secondary">Ver Repuestos</a>
+          </div>
+          <div class="product-card">
+            <div class="product-image">⚙️</div>
+            <h3>Transmisión</h3>
+            <p>Aceites, filtros, embragues y componentes de transmisión.</p>
+            <a href="/repuestos.html" class="btn btn-secondary">Ver Repuestos</a>
+          </div>
+          <div class="product-card">
+            <div class="product-image">💡</div>
+            <h3>Electricidad</h3>
+            <p>Baterías, alternadores, starters y componentes eléctricos.</p>
+            <a href="/repuestos.html" class="btn btn-secondary">Ver Repuestos</a>
+          </div>
+          <div class="product-card">
+            <div class="product-image">🛞</div>
+            <h3>Suspensión</h3>
+            <p>Amortiguadores, resortes, rótulas y brazos de suspensión.</p>
+            <a href="/repuestos.html" class="btn btn-secondary">Ver Repuestos</a>
+          </div>
+          <div class="product-card">
+            <div class="product-image">💫</div>
+            <h3>Iluminación</h3>
+            <p>Focos, faros LED, neblineros y módulos de control.</p>
+            <a href="/repuestos.html" class="btn btn-secondary">Ver Repuestos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Noticias -->
+    <section class="section-landing">
+      <div class="container">
+        <h2>Últimas Noticias</h2>
+        <p class="section-subtitle">Mantente informado sobre noticias del sector automotriz</p>
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="news-date">01 Dic</div>
+            <h3>Los 5 Repuestos que Debes Revisar Siempre</h3>
+            <p>Un chequeo preventivo te ahorrará costosas reparaciones. Focos, fluidos, llantas... aprende a identificarlos.</p>
+            <a href="/noticias.html">Leer más →</a>
+          </article>
+          <article class="news-card">
+            <div class="news-date">25 Nov</div>
+            <h3>¿Cómo Funcionan los Frenos ABS?</h3>
+            <p>Un análisis de la tecnología de frenado moderna y señales clave para el mantenimiento de tus repuestos ABS.</p>
+            <a href="/noticias.html">Leer más →</a>
+          </article>
+          <article class="news-card">
+            <div class="news-date">Hoy</div>
+            <h3>Nuevas Promociones Especiales</h3>
+            <p>Descubre nuestras ofertas especiales de esta semana en repuestos seleccionados. ¡No te lo pierdas!</p>
+            <a href="/promociones.html">Ver Promociones →</a>
+          </article>
+        </div>
+        <div class="section-cta">
+          <a href="/noticias.html" class="btn btn-primary-lg">Ver Todas las Noticias</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Nuestro Compromiso -->
+    <section class="section-landing section-alt">
+      <div class="container">
+        <h2>Nuestro Compromiso</h2>
+        <p class="section-subtitle">Valores que nos definen como empresa</p>
+        <div class="commitment-grid">
+          <div class="commitment-card">
+            <div class="commitment-icon">💎</div>
+            <h3>Repuestos Originales</h3>
+            <p>Garantizamos la autenticidad y calidad de todos nuestros productos certificados.</p>
+          </div>
+          <div class="commitment-card">
+            <div class="commitment-icon">🤝</div>
+            <h3>Atención Personalizada</h3>
+            <p>Nuestro equipo de asesores está disponible para resolver tus dudas y recomendaciones.</p>
+          </div>
+          <div class="commitment-card">
+            <div class="commitment-icon">⚡</div>
+            <h3>Entrega Rápida</h3>
+            <p>Distribuimos ágil a todos nuestros puntos de venta y realizamos envíos a domicilio.</p>
+          </div>
+          <div class="commitment-card">
+            <div class="commitment-icon">✅</div>
+            <h3>Garantía y Políticas</h3>
+            <p>Todos nuestros repuestos cuentan con garantía del fabricante y aceptamos devoluciones.</p>
+          </div>
+        </div>
+        <div class="section-cta">
+          <a href="/compromiso.html" class="btn btn-primary-lg">Conocer Más Sobre Nosotros</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: FAQ -->
+    <section class="section-landing">
+      <div class="container">
+        <h2>Preguntas Frecuentes</h2>
+        <p class="section-subtitle">Respuestas a tus dudas más comunes</p>
+        <div class="faq-container">
+          <details class="faq-item">
+            <summary>¿Cuál es vuestro horario de atención?</summary>
+            <p><strong>Lunes a Viernes:</strong> 8:00 - 18:00 | <strong>Sábados:</strong> 8:00 - 14:00 | Cerrado domingos</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Hacen envíos a domicilio?</summary>
+            <p>Sí, enviamos productos a todo el país. Consulta con nosotros los costos y tiempos de entrega según tu ubicación.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Los repuestos cuentan con garantía?</summary>
+            <p>Todos nuestros repuestos son originales o certificados y cuentan con la garantía del fabricante. Pregunta en tienda para más detalles.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Aceptan devoluciones?</summary>
+            <p>Sí, aceptamos devoluciones dentro de 7 días si el producto no ha sido usado. Consulta nuestras políticas en tienda.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Cómo saber si un repuesto es compatible con mi vehículo?</summary>
+            <p>Proporciona la marca, modelo y año de tu vehículo, y nuestro equipo de asesores confirmará la compatibilidad.</p>
+          </details>
+        </div>
+        <div class="section-cta">
+          <a href="/faq.html" class="btn btn-primary-lg">Ver Todas las Preguntas</a>
+        </div>
+      </div>
+    </section>
+  </main>

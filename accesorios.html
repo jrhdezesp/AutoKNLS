@@ -5,128 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accesorios - AutoKNLS</title>
   <link rel="icon" type="image/png" href="/logo-autoknls.png">
-  <link rel="stylesheet" href="/src/style.css">
 </head>
 <body>
-
   {{> header}}
 
-  <main>
-    <section style="padding: 4rem 0; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
-      <div class="container">
-
-        <!-- Título principal -->
-        <div style="text-align: center; margin-bottom: 4rem;">
-          <h1 style="font-size: 2.5rem; margin-bottom: 1rem; color: #1a1a1a;">Accesorios Premium</h1>
-          <p style="font-size: 1.125rem; color: #555555; max-width: 600px; margin: 0 auto;">
-            Potencia, estilo y funcionalidad para personalizar y mejorar tu vehículo
-          </p>
-        </div>
-
-        <!-- Tarjetas de categorías -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-
-          <!-- Exterior -->
-          <div style="background: #ffffff; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border-top: 4px solid #ff2c15; text-align: center; transition: .3s; cursor: pointer;"
-            onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)'"
-            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.1)'">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">🚗</div>
-            <h3 style="font-size: 1.5rem; color: #ff2c15; font-weight: 700;">Exterior</h3>
-            <p style="color: #555;">Spoilers, alerones, parachoques deportivos y deflectores de viento.</p>
-          </div>
-
-          <!-- Interior -->
-          <div style="background: #ffffff; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border-top: 4px solid #0066cc; text-align: center; transition: .3s; cursor: pointer;"
-            onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)'"
-            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.1)'">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">🪑</div>
-            <h3 style="font-size: 1.5rem; color: #0066cc; font-weight: 700;">Interior</h3>
-            <p style="color: #555;">Asientos personalizados, volantes deportivos, tapices y alfombras premium.</p>
-          </div>
-
-          <!-- Sistemas Audio -->
-          <div style="background: #ffffff; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border-top: 4px solid #cc6600; text-align: center; transition: .3s; cursor: pointer;"
-            onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)'"
-            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.1)'">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">🔊</div>
-            <h3 style="font-size: 1.5rem; color: #cc6600; font-weight: 700;">Sistemas Audio</h3>
-            <p style="color: #555;">Altavoces premium, amplificadores y sistemas de entretenimiento.</p>
-          </div>
-
-          <!-- Llantas y Rines -->
-          <div style="background: #ffffff; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border-top: 4px solid #2e7d32; text-align: center; transition: .3s; cursor: pointer;"
-            onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)'"
-            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.1)'">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">⚙️</div>
-            <h3 style="font-size: 1.5rem; color: #2e7d32; font-weight: 700;">Llantas y Rines</h3>
-            <p style="color: #555;">Llantas de performance, rines de aleación y complementos.</p>
-          </div>
-
-          <!-- Seguridad -->
-          <div style="background: #ffffff; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border-top: 4px solid #7b1fa2; text-align: center; transition: .3s; cursor: pointer;"
-            onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)'"
-            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.1)'">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
-            <h3 style="font-size: 1.5rem; color: #7b1fa2; font-weight: 700;">Seguridad</h3>
-            <p style="color: #555;">Alarmas, GPS, cámaras de retroceso y sistemas de protección.</p>
-          </div>
-
-          <!-- Protección -->
-          <div style="background: #ffffff; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border-top: 4px solid #d32f2f; text-align: center; transition: .3s; cursor: pointer;"
-            onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)'"
-            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.1)'">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">🛡️</div>
-            <h3 style="font-size: 1.5rem; color: #d32f2f; font-weight: 700;">Protección</h3>
-            <p style="color: #555;">Películas, cobertores, protectores de maletero y fundas.</p>
-          </div>
-
-        </div>
-
-        <!-- SECCIÓN DE BENEFICIOS -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
-          <div style="background: #fff; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-            <div style="font-size: 2rem;">⭐</div>
-            <h4 style="margin-top: .5rem;">Calidad Premium</h4>
-            <p>Productos de las mejores marcas.</p>
-          </div>
-
-          <div style="background: #fff; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-            <div style="font-size: 2rem;">🔧</div>
-            <h4 style="margin-top: .5rem;">Instalación Profesional</h4>
-            <p>Servicio disponible en sucursal.</p>
-          </div>
-
-          <div style="background: #fff; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-            <div style="font-size: 2rem;">🚚</div>
-            <h4 style="margin-top: .5rem;">Envío Rápido</h4>
-            <p>Disponibilidad inmediata.</p>
-          </div>
-
-          <div style="background: #fff; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-            <div style="font-size: 2rem;">💬</div>
-            <h4 style="margin-top: .5rem;">Asesoría Experta</h4>
-            <p>Te ayudamos a elegir lo mejor.</p>
-          </div>
-        </div>
-
-        <!-- CALL TO ACTION -->
-        <div style="background: linear-gradient(135deg, #ff2c15 0%, #d60000 100%); color: white; padding: 3rem 2rem; border-radius: 12px; text-align: center;">
-          <h2 style="font-size: 2rem; margin-bottom: 1rem;">Transforma tu Vehículo Hoy Mismo</h2>
-          <p style="font-size: 1.125rem; margin-bottom: 2rem;">Visita nuestras sucursales y descubre nuestra amplia gama de accesorios premium.</p>
-          <a href="/ubicaciones.html" class="btn" style="background: #fff; color: #ff2c15; padding: 1rem 2rem; border-radius: 8px; font-weight: 600; text-decoration: none; transition: .3s;"
-            onmouseover="this.style.transform='scale(1.05)';"
-            onmouseout="this.style.transform='scale(1)'">
-            Consulta Disponibilidad
-          </a>
-        </div>
-
-      </div>
-    </section>
-  </main>
+  {{> accesorios}}
 
   {{> footer}}
 
   <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
 

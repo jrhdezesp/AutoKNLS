@@ -1,0 +1,275 @@
+@import '../variables.less';
+
+// Estilos para la página de Accesorios (accesorios.html)
+
+.accesorios {
+    padding: @spacing-xl 0;
+    background: linear-gradient(135deg, @secondary-50 0%, @color-white 100%);
+
+    // Título y descripción principal
+    .accesorios-header {
+        text-align: center;
+        margin-bottom: @spacing-xl;
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: @spacing-md;
+            color: @secondary-800;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: @color-text-light;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+
+    // Grid de categorías
+    .categories-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: @spacing-lg;
+        margin-bottom: @spacing-xl;
+    }
+
+    // Tarjeta de categoría individual
+    .category-card {
+        background: @color-white;
+        padding: 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        border-top: 4px solid @color-primary;
+        text-align: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .category-icon {
+            font-size: 3rem;
+            margin-bottom: @spacing-md;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: @color-primary;
+            font-weight: 700;
+            margin-bottom: @spacing-sm;
+        }
+
+        p {
+            color: @color-text-light;
+            line-height: 1.6;
+        }
+
+        // Variaciones de color por categoría
+        &.exterior {
+            border-top-color: @primary-500;
+            h3 {
+                color: @primary-500;
+            }
+        }
+
+        &.interior {
+            border-top-color: #0066cc;
+            h3 {
+                color: #0066cc;
+            }
+        }
+
+        &.audio {
+            border-top-color: #cc6600;
+            h3 {
+                color: #cc6600;
+            }
+        }
+
+        &.llantas {
+            border-top-color: #2e7d32;
+            h3 {
+                color: #2e7d32;
+            }
+        }
+
+        &.seguridad {
+            border-top-color: #7b1fa2;
+            h3 {
+                color: #7b1fa2;
+            }
+        }
+
+        &.proteccion {
+            border-top-color: #d32f2f;
+            h3 {
+                color: #d32f2f;
+            }
+        }
+    }
+
+    // Grid de beneficios
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: @spacing-md;
+        margin-bottom: @spacing-xl;
+    }
+
+    // Tarjeta de beneficio individual
+    .benefit-card {
+        background: @color-white;
+        padding: @spacing-md;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+
+        .benefit-icon {
+            font-size: 2rem;
+            margin-bottom: @spacing-sm;
+        }
+
+        h4 {
+            margin-top: @spacing-sm;
+            color: @secondary-800;
+            font-weight: 600;
+        }
+
+        p {
+            color: @color-text-light;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+    }
+
+    // Sección CTA (Call to Action)
+    .cta-section {
+        background: linear-gradient(135deg, @primary-500 0%, @primary-900 100%);
+        color: @color-white;
+        padding: @spacing-xl;
+        border-radius: 12px;
+        text-align: center;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: @spacing-md;
+            color: @color-white;
+        }
+
+        p {
+            font-size: 1.125rem;
+            margin-bottom: @spacing-lg;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .btn {
+            background: @color-white;
+            color: @primary-500;
+            padding: @spacing-md @spacing-lg;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            }
+        }
+    }
+}
+
+// Responsive design
+@media (max-width: @breakpoint-tablet) {
+    .accesorios {
+        .accesorios-header {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .categories-grid {
+            grid-template-columns: 1fr;
+            gap: @spacing-md;
+        }
+
+        .cta-section {
+            padding: @spacing-lg;
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: @breakpoint-mobile) {
+    .accesorios {
+        padding: @spacing-lg 0;
+
+        .accesorios-header {
+            margin-bottom: @spacing-lg;
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: @spacing-sm;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .categories-grid {
+            gap: @spacing-sm;
+        }
+
+        .category-card {
+            padding: @spacing-md;
+
+            .category-icon {
+                font-size: 2.5rem;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
+
+        .benefits-grid {
+            gap: @spacing-sm;
+        }
+
+        .cta-section {
+            padding: @spacing-lg @spacing-md;
+            border-radius: 8px;
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+                margin-bottom: @spacing-md;
+            }
+        }
+    }
+}

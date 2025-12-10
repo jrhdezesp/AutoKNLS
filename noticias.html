@@ -6,76 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias y Blog - AutoKNLS</title>
     <link rel="icon" type="image/png" href="/logo-autoknls.png">
-    <link rel="stylesheet" href="/src/style.css">
 </head>
 
 <body>
     {{> header}}
 
-    <main>
-        <section class="noticias-hero">
-            <div class="container">
-                <h1 class="page-title">Novedades y Consejos para el Motor</h1>
-                <p class="page-subtitle">Mantente al día con guías de mantenimiento, lanzamientos de repuestos y noticias del sector automotriz.</p>
-            </div>
-        </section>
+  {{> noticias}}
 
-        <section class="noticias-content">
-            <div class="container noticias-container">
-                
-                <div class="post-list">
-                    
-                    <article class="post-excerpt">
-                        <div class="post-image">
-                            <img src="/img/noticia_aceite.jpg" alt="Motor y cambio de aceite">
-                        </div>
-                        <div class="post-body">
-                            <p class="post-meta">Categoría: Mantenimiento | 01 de Dic, 2025</p>
-                            <h2 class="post-title">Guía para Novatos: Los 5 Repuestos que Debes Revisar Siempre</h2>
-                            <p class="post-summary">Un chequeo preventivo te ahorrará costosas reparaciones. Focos, fluidos, llantas... aprende a identificarlos.</p>
-                            <a href="/blog-post-1.html" class="read-more">Continuar Leyendo &rarr;</a>
-                        </div>
-                    </article>
+  {{> footer}}
 
-                    <article class="post-excerpt">
-                        <div class="post-image">
-                            <img src="/img/noticia_frenos.jpg" alt="Frenos ABS">
-                        </div>
-                        <div class="post-body">
-                            <p class="post-meta">Categoría: Tecnología | 25 de Nov, 2025</p>
-                            <h2 class="post-title">¿Cómo Funcionan los Frenos ABS y Cuándo Reemplazar los Sensores?</h2>
-                            <p class="post-summary">Un análisis de la tecnología de frenado moderna y señales clave para el mantenimiento de tus repuestos ABS.</p>
-                            <a href="/blog-post-2.html" class="read-more">Continuar Leyendo &rarr;</a>
-                        </div>
-                    </article>
-
-                </div>
-                
-                <aside class="sidebar">
-                    <div class="sidebar-block">
-                        <h3 class="sidebar-title">Categorías Populares</h3>
-                        <ul class="category-list">
-                            <li><a href="#">Mantenimiento (8)</a></li>
-                            <li><a href="#">Guías de Compra (5)</a></li>
-                            <li><a href="#">Novedades de AutoKNLS (3)</a></li>
-                            <li><a href="#">Tecnología (12)</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sidebar-block promo-callout">
-                        <h3 class="sidebar-title">¡Ofertas Aquí!</h3>
-                        <p>No te pierdas los descuentos más calientes de la semana en nuestra sección de promociones.</p>
-                        <a href="promociones.html" class="btn btn-primary">Ver Promos</a>
-                    </div>
-                </aside>
-
-            </div>
-        </section>
-    </main>
-
-    {{> footer}}
-
-    <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

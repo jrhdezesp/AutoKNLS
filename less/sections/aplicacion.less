@@ -1,0 +1,97 @@
+// Estilos para la página de Aplicación Laboral (aplicacion.html)
+
+.aplicacion {
+    padding: @spacing-xl 0;
+    background: @color-white;
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: @spacing-lg;
+        text-align: center;
+        color: @secondary-800;
+    }
+
+    .aplicacion-subtitle {
+        text-align: center;
+        font-size: 1.125rem;
+        margin-bottom: @spacing-xl;
+        color: @color-text-light;
+    }
+
+    .application-card {
+        max-width: 620px;
+        margin: 0 auto;
+        background: @secondary-50;
+        padding: 2.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .application-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .submit-btn {
+        padding: 0.875rem 2rem;
+        font-size: 1.125rem;
+        border-radius: 6px;
+        cursor: pointer;
+        align-self: flex-start;
+    }
+
+    .contact-note {
+        margin-top: 3rem;
+        text-align: center;
+        color: @secondary-600;
+
+        strong {
+            color: @secondary-800;
+        }
+    }
+}
+
+// Estilos del formulario
+.form-field {
+    margin-bottom: @spacing-md;
+
+    label {
+        display: block;
+        margin-bottom: @spacing-xs;
+        font-weight: 600;
+        color: @color-text;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: @spacing-sm @spacing-md;
+        border: 1px solid @secondary-200;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-family: @font-family-base;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            outline: none;
+            border-color: @color-primary;
+        }
+
+        &::placeholder {
+            color: @secondary-400;
+        }
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    .error-message {
+        display: none;
+        color: @color-primary;
+        font-size: 0.875rem;
+        margin-top: @spacing-xs;
+    }
+}

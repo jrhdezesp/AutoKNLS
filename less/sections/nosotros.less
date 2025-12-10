@@ -1,5 +1,3 @@
-@import '../variables.less';
-
 .nosotros {
     padding: @spacing-xl 0;
     background-color: @color-background;
@@ -26,10 +24,10 @@
     }
 
     &__about {
-        background-color: #ffffff;
+        background-color: @color-white;
         padding: 2.5rem;
         border-radius: 8px;
-        border: 1px solid #000000; // marco fino
+        border: 1px solid @color-text; // marco fino
 
         h2 {
             margin-bottom: 1.5rem;
@@ -55,7 +53,7 @@
             padding: 2rem;
             background-color: @secondary-50;
             border-radius: 8px;
-            border: 1px solid #000000; // marco fino
+            border: 1px solid @color-text; // marco fino
 
             h3 {
                 margin-bottom: @spacing-sm;
@@ -71,12 +69,12 @@
     }
 
     &__values {
-        background: linear-gradient(135deg, #ff4d3b 0%, #d60000 100%);
+        background: linear-gradient(135deg, @primary-400 0%, @primary-900 100%);
         color: white;
         padding: 2.5rem;
         border-radius: 8px;
         text-align: center;
-        border: 1px solid #000000; // marco fino
+        border: 1px solid @color-text; // marco fino
 
         h3 {
             margin-bottom: @spacing-md;

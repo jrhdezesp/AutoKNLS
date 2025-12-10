@@ -1,0 +1,134 @@
+@import '../variables.less';
+
+// Estilos para la página de Ubicaciones (ubicaciones.html)
+
+.sucursales-section {
+    padding: @spacing-xl 0;
+    background: linear-gradient(135deg, rgba(255, 44, 21, 0.95) 0%, rgba(255, 100, 70, 0.95) 100%);
+    color: @color-white;
+    position: relative;
+
+    .sucursales-bg-pattern {
+        position: absolute;
+        inset: 0;
+        background: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22none%22 stroke=%22white%22 stroke-width=%220.5%22 opacity=%220.1%22/></svg>') repeat;
+        pointer-events: none;
+    }
+
+    .sucursales-container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .sucursales-header {
+        text-align: center;
+        margin-bottom: @spacing-xl;
+    }
+
+    .sucursales-title {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: @spacing-md;
+        color: @color-white;
+    }
+
+    .sucursales-subtitle {
+        font-size: 1.125rem;
+        color: rgba(255, 255, 255, 0.95);
+        margin: 0;
+    }
+
+    // Grid de sucursales
+    .sucursales-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: @spacing-lg;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    // Tarjeta de sucursal individual
+    .sucursal-card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: @spacing-lg;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        color: #333;
+
+        &:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.25);
+        }
+
+        .sucursal-icon {
+            font-size: 2.5rem;
+            margin-bottom: @spacing-md;
+        }
+
+        .sucursal-card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: @spacing-md;
+            color: @primary-500;
+        }
+
+        .sucursal-card-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: @spacing-sm;
+            color: #333;
+
+            strong {
+                font-weight: 600;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// Responsive design
+@media (max-width: @breakpoint-tablet) {
+    .sucursales-section {
+        padding: @spacing-lg 0;
+
+        .sucursales-title {
+            font-size: 2rem;
+        }
+
+        .sucursales-grid {
+            grid-template-columns: 1fr;
+            gap: @spacing-md;
+        }
+    }
+}
+
+@media (max-width: @breakpoint-mobile) {
+    .sucursales-section {
+        padding: @spacing-lg @spacing-md;
+
+        .sucursales-title {
+            font-size: 1.75rem;
+        }
+
+        .sucursales-subtitle {
+            font-size: 1rem;
+        }
+
+        .sucursal-card {
+            padding: @spacing-md;
+
+            .sucursal-card-title {
+                font-size: 1.25rem;
+                margin-bottom: @spacing-sm;
+            }
+
+            .sucursal-card-text {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

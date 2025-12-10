@@ -1,29 +1,17 @@
 import '../less/style.less'
+import { initNavigation } from './scripts/navigation.js'
+import { initHeroCarousel, initBrandsCarousel } from './scripts/carousels.js'
+import { initJobApplicationForm } from './scripts/formValidation.js'
 
-// Menu dropdown functionality
+// Inicializar todo cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menuDropdown = document.querySelector('.menu-dropdown');
+    // Inicializar navegación (header y menú)
+    initNavigation();
 
-    if (menuToggle && menuDropdown) {
-        menuToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            menuDropdown.classList.toggle('active');
-        });
+    // Inicializar carruseles si están en la página
+    initHeroCarousel();
+    initBrandsCarousel();
 
-        // Cerrar menú cuando se hace click afuera
-        document.addEventListener('click', function(e) {
-            if (!menuDropdown.contains(e.target)) {
-                menuDropdown.classList.remove('active');
-            }
-        });
-
-        // Cerrar menú cuando se hace click en un link
-        const menuItems = document.querySelectorAll('.menu-items a');
-        menuItems.forEach(item => {
-            item.addEventListener('click', function() {
-                menuDropdown.classList.remove('active');
-            });
-        });
-    }
+    // Inicializar formulario de aplicación si está en la página
+    initJobApplicationForm();
 });
