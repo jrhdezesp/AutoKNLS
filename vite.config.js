@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const base = process.env.DEPLOY_BASE_URL || '/';
+const base = process.env.DEPLOY_BASE_URL || '/AutoKNLS/';
 
 function obtenerEntradas() {
     return Object.fromEntries(
@@ -31,7 +31,7 @@ function obtenerEntradas() {
 
 export default defineConfig({
     appType: 'mpa',
-    base: process.env.DEPLOY_BASE_URL,
+    base,
     plugins: [
         handlebars({
             partialDirectory: resolve(__dirname, 'src/hbs/partials'),
