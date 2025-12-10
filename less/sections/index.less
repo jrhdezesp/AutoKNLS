@@ -132,6 +132,7 @@
         z-index: 10;
         transition: all 0.3s ease;
         border-radius: 4px;
+        display: block;
 
         &:hover {
             background-color: rgba(255, 255, 255, 0.9);
@@ -539,8 +540,7 @@
     }
 
     .carousel-nav {
-        padding: @spacing-sm;
-        font-size: 1rem;
+        display: none;
     }
 
     .brands-carousel .brand-item {
@@ -571,7 +571,7 @@
     }
 
     .carousel-nav {
-        display: none;
+        display: none !important;
     }
 
     .brands-carousel .brand-item {
