@@ -12,19 +12,15 @@
 }
 
 .brands-carousel {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 1rem;
-    justify-content: flex-start;
-    align-items: center;
-    min-width: 0;
+    white-space: nowrap;
     overflow-x: auto;
+    padding-bottom: 0.5rem;
     scrollbar-width: thin;
     scrollbar-color: @primary-200 @color-white;
 }
 
 .brand-item {
-    flex: 0 0 auto;
+    display: inline-block;
     padding: 0.4rem 1.2rem;
     background: @primary-100;
     border-radius: 1rem;
@@ -33,9 +29,9 @@
     color: @primary-700;
     white-space: nowrap;
     box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-    margin: 0.3rem 0;
+    margin: 0.3rem 0.7rem 0.3rem 0;
     transition: background 0.2s;
-    min-width: 0;
+    min-width: 80px;
     text-align: center;
     &:hover {
         background: @primary-200;
@@ -44,11 +40,13 @@
 
 @media (max-width: 600px) {
     .brands-carousel {
-        gap: 0.4rem;
+        padding-bottom: 0.2rem;
     }
     .brand-item {
-        padding: 0.3rem 0.7rem;
-        font-size: 0.95rem;
+        padding: 0.25rem 0.6rem;
+        font-size: 0.92rem;
+        margin-right: 0.4rem;
+        min-width: 60px;
     }
 }
 // Estilos específicos del Landing Page (index.html)
