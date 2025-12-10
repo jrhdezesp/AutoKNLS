@@ -37,7 +37,8 @@ export default defineConfig({
             partialDirectory: resolve(__dirname, 'src/hbs/partials'),
             context: {
                 title: 'AutoKNLS',
-                year: new Date().getFullYear()
+                currYear: new Date().getFullYear(),
+                footerbottom: 'AutoKNLS. Todos los derechos reservados.'
             }
         }),
         HtmlCssPurgePlugin(),

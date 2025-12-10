@@ -1,8 +1,18 @@
 // Carruseles del landing page
 
-// Carrusel Hero
-let currentHeroSlide = 0;
-let heroAutoPlayInterval;
+/**
+ * Estado centralizado de los carruseles
+ * Encapsula variables de estado para mejor organización y mantenibilidad
+ */
+const CarouselState = {
+    hero: {
+        current: 0,
+        autoPlayInterval: null
+    },
+    brands: {
+        scrollPos: 0
+    }
+};
 
 export function initHeroCarousel() {
     const heroSlides = document.querySelectorAll('.carousel-slide');
@@ -24,19 +34,19 @@ export function initHeroCarousel() {
 
 export function moveCarousel(direction) {
     const heroSlides = document.querySelectorAll('.carousel-slide');
-    currentHeroSlide += direction;
+    CarouselState.hero.current += direction;
     
-    if (currentHeroSlide >= heroSlides.length) {
-        currentHeroSlide = 0;
-    } else if (currentHeroSlide < 0) {
-        currentHeroSlide = heroSlides.length - 1;
+    if (CarouselState.hero.current >= heroSlides.length) {
+        CarouselState.hero.current = 0;
+    } else if (CarouselState.hero.current < 0) {
+        CarouselState.hero.current = heroSlides.length - 1;
     }
     
     updateHeroCarousel();
 }
 
 function goToHeroSlide(index) {
-    currentHeroSlide = index;
+    CarouselState.hero.current = index;
     updateHeroCarousel();
 }
 
@@ -44,18 +54,18 @@ function updateHeroCarousel() {
     const heroCarousel = document.getElementById('heroCarousel');
     if (!heroCarousel) return;
 
-    heroCarousel.style.transform = `translateX(-${currentHeroSlide * 100}%)`;
+    heroCarousel.style.transform = `translateX(-${CarouselState.hero.current * 100}%)`;
     
     document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentHeroSlide);
+        dot.classList.toggle('active', index === CarouselState.hero.current);
     });
     
-    clearInterval(heroAutoPlayInterval);
+    clearInterval(CarouselState.hero.autoPlayInterval);
     autoPlayHeroCarousel();
 }
 
 function autoPlayHeroCarousel() {
-    heroAutoPlayInterval = setInterval(() => {
+    CarouselState.hero.autoPlayInterval = setInterval(() => {
         moveCarousel(1);
     }, 5000);
 }
@@ -65,15 +75,13 @@ export function initBrandsCarousel() {
     const brandsCarousel = document.getElementById('brandsCarousel');
     if (!brandsCarousel) return;
 
-    let brandScrollPos = 0;
-
     function autoBrandScroll() {
-        brandScrollPos += 1;
-        brandsCarousel.style.transform = `translateX(-${brandScrollPos}px)`;
+        CarouselState.brands.scrollPos += 1;
+        brandsCarousel.style.transform = `translateX(-${CarouselState.brands.scrollPos}px)`;
 
         // Cuando llegue al final de los primeros 16 items, resetear
-        if (brandScrollPos >= brandsCarousel.scrollWidth / 2) {
-            brandScrollPos = 0;
+        if (CarouselState.brands.scrollPos >= brandsCarousel.scrollWidth / 2) {
+            CarouselState.brands.scrollPos = 0;
         }
     }
 
