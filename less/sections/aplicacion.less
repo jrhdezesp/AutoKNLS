@@ -1,5 +1,76 @@
 // Estilos para la página de Aplicación Laboral (aplicacion.html)
 
+.aplicacion-hero {
+    background-image: url('/img/heroes/pexels-senansperspective-29851074.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+    }
+
+    .page-title {
+        font-size: 3rem;
+        color: @color-white;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        font-weight: 700;
+    }
+
+    .page-subtitle {
+        font-size: 1.25rem;
+        color: @color-white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        font-weight: 300;
+    }
+
+    @media (max-width: @breakpoint-tablet) {
+        padding: 4rem 1rem;
+        min-height: 300px;
+
+        .page-title {
+            font-size: 2.2rem;
+        }
+
+        .page-subtitle {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: @breakpoint-mobile) {
+        padding: 3rem 1rem;
+        min-height: 250px;
+
+        .page-title {
+            font-size: 1.8rem;
+        }
+
+        .page-subtitle {
+            font-size: 0.9rem;
+        }
+    }
+}
+
 .aplicacion {
     padding: @spacing-xl 0;
     background: @color-white;

@@ -84,17 +84,35 @@
         justify-content: center;
         min-height: 500px;
         padding: @spacing-lg @spacing-md;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
 
         &.hero-slide-primary {
-            background: linear-gradient(135deg, #ff2c15 0%, #d60000 100%);
+            background-image: url('/img/heroes/pexels-pixabay-65623.jpg');
+            background-color: #ff2c15;
         }
 
         &.hero-slide-secondary {
-            background: linear-gradient(135deg, #ff593a 0%, #ff2c15 100%);
+            background-image: url('/img/heroes/pexels-lumierestudiomx-4116232.jpg');
+            background-color: #ff593a;
         }
 
         &.hero-slide-tertiary {
-            background: linear-gradient(135deg, #fb1809 0%, #ee0202 100%);
+            background-image: url('/img/heroes/pexels-mikebirdy-190574.jpg');
+            background-color: #fb1809;
         }
 
         .carousel-content {
