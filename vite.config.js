@@ -1,8 +1,35 @@
 import { defineConfig } from 'vite';
-import { resolve } from 'path';
+import path, { resolve } from 'node:path';
+import * as glob from 'glob';
 import handlebars from 'vite-plugin-handlebars';
+import { ViteMinifyPlugin } from 'vite-plugin-minify';
+import HtmlCssPurgePlugin from 'vite-plugin-purgecss';
+import { fileURLToPath } from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+function obtenerEntradas() {
+    return Object.fromEntries(
+        glob.sync(
+            './**/*.html',
+            {
+                ignore: [
+                    './dist/**',
+                    './node_modules/**'
+                ]
+            }
+        ).map((file) => {
+            return [
+                file.slice(0, file.lastIndexOf('.')),
+                resolve(__dirname, file)
+            ]
+        })
+    );
+}
 
 export default defineConfig({
+    appType: 'mpa',
     plugins: [
         handlebars({
             partialDirectory: resolve(__dirname, 'src/hbs/partials'),
@@ -10,23 +37,16 @@ export default defineConfig({
                 title: 'AutoKNLS',
                 year: new Date().getFullYear()
             }
-        })
+        }),
+        HtmlCssPurgePlugin(),
+        ViteMinifyPlugin()
     ],
     build: {
+        minify: 'terser',
         rollupOptions: {
-            input: {
-                main: resolve(__dirname, 'index.html'),
-                ubicaciones: resolve(__dirname, 'ubicaciones.html'),
-                promociones: resolve(__dirname, 'promociones.html'),
-                historia: resolve(__dirname, 'historia.html'),
-                compromiso: resolve(__dirname, 'compromiso.html'),
-                aplicacion: resolve(__dirname, 'aplicacion.html'),
-                noticias: resolve(__dirname, 'noticias.html'),
-                blog: resolve(__dirname, 'blog.html'),
-                nosotros: resolve(__dirname, 'nosotros.html'),
-                faq: resolve(__dirname, 'faq.html'),
-                repuestos: resolve(__dirname, 'repuestos.html'),
-                accesorios: resolve(__dirname, 'accesorios.html')
+            input: obtenerEntradas(),
+            output: {
+                manualChunks: undefined
             }
         }
     },
